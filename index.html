@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .div1 {
+            width: 400px;
+            height: 200px;
+            border: 1px solid rgb(175, 175, 175);
+            padding: 20px;
+        }
+
+        .div1 h1 {
+            text-align: center;
+            color: green;
+        }
+
+        .div1 p {
+            text-align: center;
+            color: green;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="radio" value="light" v-model="currentTheme" v-on:change="setTheme">light theme
+        <input type="radio" value="dark" v-model="currentTheme" v-on:change="setTheme">dark theme
+        <div class="div1" :style="theme[currentTheme]">
+            <h1>Text</h1>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+        <script src="index.js"></script>
+    </div>
+</body>
+
+</html>
